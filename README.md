@@ -1,5 +1,6 @@
 # Dummy Node JS
 A dummy web server using NodeJS | Deployed to [Heroku](https://my-dummy-node.herokuapp.com/)
+
 Traversy Media Crash Course series ([more](https://www.youtube.com/watch?v=fBNz5xF-Kx4))
 
 ## Geting started
