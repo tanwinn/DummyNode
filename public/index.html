@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<!-- Details, title, specs, CSS Styles (not rec) -->
+	<title>HTML Cheat sheet</title>
+	<!-- CSS Style link -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body style="margin-bottom: 150px; margin-left: 30px; margin-right: 100px">
+	<h1>Note</h1>
+	<div>
+		Exact src code: Ctrl+U (Firefox) / F12 (Chrome)
+		<br>
+		PHP: dynamic programming that generates the HTML code
+	</div>
+	
+	<hr>
+	
+	<h1>Basic functional tags</h1>
+	<div style="margin-top:10px">
+		<!-- Headings -->
+		<h3>Heading Three</h3>
+		<h4>Heading Four</h4>
+		<h5>Heading Five</h5>
+		<h6>Heading Six</h6>
+
+		<!-- Paragraphs -->
+		<p>
+			<strong>Type lorem and press tab for Sublimetext to generate lorem paragraph</strong>
+			<br>
+			Inline vs Block
+			<br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<h2>Tags</h2>
+		<p> 
+			<strong>strong tag is better than bold because it is more senmantic </strong>
+			<br>
+			<em>emphasize tag is better than italics because it is more senmantic</em>
+			<br>
+			You can customize strong/em in css, default is bold/italics
+			<br>
+			<a href="google.com" target="_blank">This is an external link to Google.com using a href tag with its tag attribute <em>target</em></a>
+		</p>
+
+		<!-- List -->
+		<h4>Unordered list</h4>
+		<ul>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 4</li>
+			<li>List item 5</li>
+		</ul>
+
+		<h4>Ordered list</h4>
+		<ol>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 4</li>
+			<li>List item 5</li>
+		</ol>
+
+		<h4>Table</h4>
+		for tabular data <em>only</em>
+		<br>
+		<table>
+			<thead>
+				<!-- Head of the table: t-head -->
+				<!-- t-row -->
+				<tr>
+					<!-- t-header of t-row-->
+					<th>Commoner</th>
+					<th>Scietific Name</th>
+					<th>Habitat</th>
+					<th>Id</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Body of the table: t-body -->
+				<tr>
+					<!-- t-data for t-row -->
+					<td>King Penguin</td>
+					<td>Aptenodytes Patagonicus</td>
+					<td>Rocky Antarctic Islands</td>
+					<td>1</td>
+			</tr>
+			<tr>
+				<td>Heron</td>
+				<td>Ardeidae</td>
+				<td>Wetland regions</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Burrowing Frog</td>
+				<td>Heleioporus</td>
+				<td>Forests, rivers, and marshes</td>
+				<td>3</td>
+			</tr>
+			</tbody>
+		</table>
+		
+		<!-- Form -->
+		<h4>Forms</h4>
+		build the look <strong>not functional</strong> of the form
+		<br>
+		<!-- #action: submit the form to a certain page -->
+		<form action="process.PHP" method="POST">
+			<div> <!-- BLOCK-LEVEL -->
+				<!-- IN-LINE -->
+				<label>Common Name</label>
+				<input type="text" name="commonName">
+			</div>
+			<div>
+				<label>Scientific Name</label>
+				<select name="species">
+					<option value=1>Aptenodytes Patagonicus</option>
+					<option value=2>Ardeidae</option>
+					<option value=3>Heleioporus</option>
+				</select>
+			</div>
+			<div>
+				<label>City</label>
+				<input type="text" name="city">
+			</div>
+			<div>
+				<label>Note</label>
+				<textarea name="note"></textarea>
+			</div>
+			<p>
+				Other label types: date, time, number, etc.
+			<input type="submit" name="submitButton" value="Submit">
+			</p>
+		</form>
+
+		<h4>Button</h4>
+		<!-- Button -->
+		<button>Click Me! I'm a fake ass butt-on</button>
+
+		<!-- Image -->
+		<h4>Image</h4>
+		<img src="img/sample.jpeg" alt="My Sample Img" width="400"> <!-- Width/Height should >> CSS -->
+
+		<!-- Quotations -->
+		<blockquote cite="myCitationSource.html" id="BlockQuoteExample">If Rosa had a twin, she would have eaten her in the womb.</blockquote>
+
+		<p>The <abbr title="Brooklyn Noine Noine">B99</abbr> is awesome</p>
+	</div>
+
+	<hr>
+
+	<h1>HTML5 Semantic Tags</h1>
+	Map out the HTML page using semantic tags
+	<div>
+		<a href="img/note01-html5SemanticTag.png" target="_blank"><img src="img/note01-html5SemanticTag.png" width="500"></a>
+	</div>
+
+	<a href="blog.html">BLOG.HTML PAGE</a>
+</body> 
+</html>

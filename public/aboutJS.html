@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-compatible" content="ie=edge">
+	<title>About JavaScript - Crash Course practice by Traversy Media</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<!-- header -->
+	<header class="mainHeader">
+		<h1>We Needs to Talk about <line-through>Vanilla</line-through> JavaScript!</h1>
+	</header>
+
+	<section class="container">
+		<!-- Overview -->
+		<section>
+			<h2>Overview: Javascript</h2>
+			<ul class="fancy">
+				<li><strong>is Vanilla JS</strong> = Raw JS = JS with <em>no</em> framework</li>
+				<li><strong>is classlss:</strong> no classes that defines the behaviour of a class statically</li>
+				<li><p>
+					<strong>uses prototypes instead:</strong> to define objects' properties, including methods & inheritance
+					<code class="block">
+						<teal>typeof()</teal>;
+						<br>
+						<teal>instanceof()</teal>;
+						<br>
+						obj. <teal>constructor</teal>
+						<br>
+						func. <teal>prototype</teal>
+						<br>
+						<a href="https://stackoverflow.com/questions/1249531/how-to-get-a-javascript-objects-class" target="_blank" style="margin-left: 85%">Source</a>
+					</code>
+				</p></li>
+			</ul>
+		</section>
+		
+		<!-- Basic syntax -->
+		<section>
+			<h2>Basic stuff</h2> 
+			<em>that I don't really care</em>
+			
+			<!-- Console -->
+			<div>
+				<h3>Console</h3>
+				<code class="block">
+					console.log();
+					<br>
+					console.error(); 
+					<br>
+					console.warn();</code>
+			</div>
+
+			<!-- Data types -->
+			<div>
+				<h3>Data types</h3>
+				<p>
+					<code>let</code> and <code>const</code> are block-level scope (reccommended)
+					<br>
+					<code>var</code> is old, has global scope
+				</p>
+				
+				<p>
+					<h4>JS is weakly typed</h4>
+					<code class="block">
+							let mix = <crimson>"this is string"</crimson>;
+							<br>
+							console.log(mix);
+							<br>
+							mix = <crimson>2</crimson>;
+							<br>
+							console.log(`mix: ${mix}`);
+					</code>
+				</p>
+				
+				<p>
+					<h4>String, numbers, boolean, null, undefined, and Symbols</h4>
+					<code class="block">
+							const x = null;
+							<br>
+							const y = undefined;
+							<br>
+							let z; <em>// undefined</em>
+							<br>
+							console.log(typeof x);
+							<br>
+							<em>// null object points to null pointer return type bogus</em>
+					</code>
+				</p>
+
+				<p>
+					<h4>To better corporate other vars into strings</h4>
+					<code class="block">
+							<crimson><strong-big>`</strong-big></crimson>My name is <teal>${science}</teal>, but you can call me <teal>${common}</teal><crimson><strong-big>`</strong-big></crimson>
+					</code>
+				</p>
+
+				<p>
+					<h4>Arrays</h4>
+					<code class="block">
+						<em>// array of numbers</em>
+						<br>
+						let numbers = new Array(1,2,3,4,12);
+						<br>
+						<em>// array of strings</em>
+						<br>
+						let animals = ["king penguin", "arctic fox", "heron", "burrowing frog"];
+						<br>
+						<em>// arrays of random shit types</em>
+						<br>
+						let mix = new Array(3, 2.3, "dog", ["cat", 2]);
+					</code>
+				</p>
+
+				<p>
+					<h4>Object literals</h4>
+					<h5>is key value pairs</h5>
+					<code class="block">
+						const entity = {
+						<p class="indent">
+							commonName: "heron",
+							<br>
+							scientificName: "Ardeidae",
+							<br>
+							habitat: "wetland regions",
+							<br>
+							id: 2,
+							<br>
+							isCarnivore: false,
+							<br>
+							cutenessLevel: 5,
+							<br>
+							place: { city: "LA", zipcode: 90057 }
+						</p>
+						}
+						<br>
+						console.log(entity.commonName.length);
+					</code>
+					<h5>arrays of object literals</h5>
+					<code class="block">
+						let todos = [{ }, { }, { } ];
+					</code>
+				</p>
+				
+				<p>
+					<h4>JSON</h4>
+					<ul>
+						<li>a data format that is used to communicate between APIs, servers, and layers & in fullstack dev</li>
+						<li>convert JS object <em>todos</em> to JSON object <code>JSON.stringify(<teal>todos</teal>);</code></li>
+					</ul>
+				</p>
+			</div>
+			
+			<!-- For loops -->
+			<div>
+			<h3>For loops</h3>		
+			<code class="block">
+				for (<crimson>let</crimson> i=0; i<=1; i++){ }
+				<br>
+				<em>// forEach, map, filter</em>
+				<br>
+				<crimson>let</crimson> todoCompleted = todos.filter(<teal>function</teal>(todos) {
+					<p class="indent">
+						<crimson>return</crimson> todo.isCompleted === <teal>true</teal>;
+					</p>
+				} <crimson>)</crimson>;
+			</code>
+			</div>
+
+			<!-- Functions -->
+			<div>
+				<h3>Function</h3>
+				<p>
+					<h4>Syntax</h4>
+					<img src="./img/functionJS.png" style="width: 40%; margin-left: 2%">
+				</p>
+				<p>
+					<h4>Function Constructor = Prototype</h4>
+					<img src="./img/functionConstruct.png" style="width: 40%; margin-left: 2%">
+				</p>
+				<p>
+					<h4>Instantiate object</h4>
+					<img src="./img/funcInstantiate.png" style="width: 40%; margin-left: 2%">
+				</p>
+				<p>
+					<h4>Accessing the prototype</h4>
+					<code class="block">
+						Person.<teal>prototype</teal>.getBirthYear = <teal>function</teal>(){ }
+					</code>
+				</p>
+			</div>
+
+			<!-- Class -->
+			<div>
+				<h3>Class</h3>
+				<img src="./img/JSclass.png" style="width: 40%; margin-left: 2%">
+			</div>
+
+		</section>
+	
+		<!-- DOM -->
+		<section>
+			<h2>DOM = Document Object Model</h2>
+			<div>
+				<h3>Explaining stuff</h3>
+				<ul class="fancy">
+					<li>Document Object Model: a tree structure of the document</li>
+					<li><code>window</code> object = parent object of the browser (top level)
+						<code class="block">console.log(<teal>window</teal>);</code></li>
+					<li><code>document</code> of window object makes up the DOM, e.g. <code>document.getElementById("id");</code></li>
+				</ul>	
+			</div>
+				<h3>Single Element vs. Multiple Element</h3>
+				<h4>Single Element</h4>
+				<code class="block">querySelector();</code>
+				<h4>Multiple Element</h4>
+				<p>
+					<code>querySelectorAll();</code> returns a <strong>node list</strong>, which is a list object.
+				</p>
+			<div>
+
+			<div>
+				<h3>Events & event interface</h3>
+				<ul class="fancy">
+					<li>The <code>Event</code> interface = an event takes place in the DOM</li>
+					<li>Event object contains properties & methods common to all events</li>
+					<li>DOM elements can <em>listen</em> & <em>handle</em> events
+						</ul>
+					</li>
+				</ul>
+			</div>
+				<h3>Example</h3>
+				<form id="his-form">
+					<h3 class="center">Add User</h3>
+					<div class="msg"></div>
+					<div>
+					<label for="name">Name:</label>
+					<input type="text" id="name">
+					</div>
+					<div>
+					<label for="email">Email:</label>
+					<input type="text" id="email">
+					</div>
+					<input class="btn" type="submit" value="Submit">
+				</form>
+			
+				<ul id="users"></ul>
+				<ul class="items"></ul>
+			</div>
+	
+		</section>
+	</section>
+	
+	<hr>
+
+	<section class="container"><h3>Visual Studio Code</h2>	
+		<ul class="fancy">
+			<li><div>
+				<strong>Extensions: </strong> Live Server
+			</div></li>
+		</ul>
+	</section>
+
+	<!-- Script -->
+	<script src="main.js"></script>
+</body>
+</html>

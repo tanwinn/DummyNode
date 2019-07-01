@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Cheat Sheet</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="container">
+	<header>
+		<h1>CSS For Dummies 101</h1>
+		<em>Cause only dummies wrote both Dummy and 101, you dum dum</em>
+	</header>
+
+	<section class="boxOne">
+		<!-- CSS IS -->
+		<section>
+			<h2>CSS is</h2>
+			<ul>
+				<li>Cascading Stylesheets</li>
+				<li>Stylesheet/Styling Language</li>
+				<li>used for website layout/Design</li>
+				<li>Can be functionally extended with Sass/Less</li>
+			</ul>
+		</section>
+
+		<!-- 3 Methods -->
+		<section>
+			<h2>3 Methods for adding CSS</h2>
+			<ul>
+				<li><strong>Inline CSS:</strong> directly with the html element <warn>FUCK NO YOU DUMBASS</warn> <em>Not scalable</em></li>
+				<li><strong>Internal CSS:</strong> using style tags within a single document</li> <warn>NOPE</warn>
+				<li><strong>Exernal CSS:</strong> Linking an external .CSS file</li>
+			</ul>
+		</section>
+
+		<!-- Terms & Def -->
+		<section>
+			<h2>Terms & Definitions</h2>
+			<div>
+				<h3>CSS Selectors</h3>
+				<code class="block" id="CodeExample">
+					a <!-- selector --> {
+						background-color: yellow; <!-- dec-seperator -->
+					}
+				</code>
+			</div>
+			
+			<div>
+				<h3>More CSS Selector syntax</h3>
+				<ul class="fancy">
+					<li>
+					<strong-big>Style all &lt;p&gt; elements with class "AustralianMist" | &lt;h2&gt;</strong-big>
+					<code class="block">
+						p<teal>.AustralianMist</teal>{ }
+						<br>
+						p<teal>.AustralianMist</teal><crimson>.h2</crimson>{ }
+					</code>
+					E.g:
+					&lt;Div&gt; of <a href="#DivExample">Responsive Layout</a> and Its <crimson>&lt;h3&gt;</crimson> & <crimson>&lt;ul&gt;</crimson>
+				</li>
+				<li>
+					<strong-big>Style semantic &lt;red&gt; in &lt;code&gt;</strong-big>
+					<code class="block">
+						&lt;code&gt;Maddein is <crimson>&lt;red&gt;</crimson>red<crimson>&lt;/red&gt;</crimson> and the rest is not.&lt;/code&gt;
+					</code>
+					<em>*.CSS:</em>
+					<code>
+						<crimson>code</crimson> red{ }
+					</code>
+				</li>
+				<li>
+					<strong-big>Style elemenets of class Hieronymus & Bosch</strong-big>
+					<code class="block">&lt;div class="Hieronymus Bosch"&gt;&lt;/div&gt;
+					</code>
+					<em>*.CSS: </em><code>
+						.Hieronymus.Bosch{ }
+					</code>
+				</li>
+				<li>
+					<strong-big>when there are different class</strong-big>
+					<code class="block">.myForm <crimson>input</crimson>[type="text"], .myForm <crimson>textarea</crimson>{ }
+					<br>
+					.myForm <crimson>input</crimson>[type="submit"]{ }
+					</code>
+			</div>
+
+			<div>
+				<h3>Some tags have states</h3>
+				<code class="block">
+					a:hover{} / a:active{} / a:visited{} / a:link{}
+				</code>
+				<code class="block">
+					&lt;<crimson>input</crimson> class="button"&gt; &lt;<crimson>/input</crimson>&gt;
+					<br>
+					.button:hover{ }
+				</code>
+			</div>
+
+			<div>
+				<h3>ID vs. Class</h3>
+				<p>ID should be unique, cannot be re-used. Classes can. When styling, we should style class.</p>
+				<strong-big>When declare in .CSS:</strong-big>
+				<ul>
+					<li>Semantic tags as selctors declared directly with no prefix</li>
+					<li>Classes as selectors prefix dot .</li>
+					<li>IDs as selectors prefix pound #</li>
+				</ul>
+			</div>
+
+			<div>
+				<h3>Box Model: <em>Padding, Border, and Margin</em></h3>
+				<img src="./img/BoxModel.png">
+				<strong>Padding</strong> is the space inside, <strong>Margin</strong> is the space outside.
+				<br>
+				<strong-big>E.G:</strong-big> <a href="index.html#BlockQuoteExample" target="_blank">Block Quote example</a> using left border, width % & padding &bull; <a href="#CodeExample">Code Block example</a></p>
+			</div>
+		</section>
+
+		<!-- Style Guide -->
+		<section>
+			<h2>Style Guide</h2>
+			<div>
+				<h3>Web Safe Fonts</h3>
+				<img src="./img/font.png" width="800">
+			</div>  
+
+			<div class="categories" id="DivExample">
+				<h3>Responsive Layout</h3>
+				<ul> 
+					<li>Use an overall container class for the whole content.</li>
+					<li>Use percentages when it comes to width, padding, and margin.</li>
+				</ul>
+				<br>
+				Check Style.CSS/.container & .img for reference <a href="https://youtu.be/yfoY53QXEnI?t=1480" target="_blank">(24:40)</a></p>
+			</div>
+		</section>
+
+		<section>
+		<!-- Form -->
+		<h3>Forms</h3>
+		<form action="process.PHP" method="POST" class="myForm">
+			<div class="formGroup"> <!-- BLOCK-LEVEL -->
+				<!-- IN-LINE -->
+				<label>Common Name</label>
+				<input type="text" name="commonName">
+			</div>
+			<div class="formGroup">
+				<label>Scientific Name</label>
+				<select name="species">
+					<option value=1>Aptenodytes Patagonicus</option>
+					<option value=2>Ardeidae</option>
+					<option value=3>Heleioporus</option>
+				</select>
+			</div>
+			<div class="formGroup">
+				<label>City</label>
+				<input type="text" name="city">
+			</div>
+			<div class="formGroup">
+				<label>Note</label>
+				<textarea name="note"></textarea>
+			</div>
+			<input class="button" type="submit" name="submitButton" value="Submit">
+			</p>
+		</form>
+		</section>
+	</section>
+
+	<section class="blockGroup">
+
+		<div class="block">
+			<h3>Alopex Lagopus (Arctic Fox)</h3>
+			<p>As with many animals that inhabit the Arctic regions, the fur of the Arctic fox changes colour to adapt to its surroundings accordingly. In the winter, the Arctic fox has thick, white fur which allows the Arctic fox to remain warm and camouflaged in its snowy surroundings. In the summer months, the fur of the Arctic fox changes to a brown colour as there the snow will have melted. This newly coloured brown fur of the Arctic fox, allows the Arctic fox to remain as inconspicuous as possible whilst there is no snow in the Arctic during the summer months.</p>
+		</div>
+
+		<div class="block">
+			<img src="./img/Mustard02.jpg">
+		</div>
+
+		<div class="block">
+			<h3>Poecilia (Molly)</h3>
+			<p>Mollies are known for their calm and peaceful nature, which along with their brightly coloured bodies, makes them a particularly popular choice for freshwater tanks of all shapes and sizes. The male mollies are more slender than the female mollies and have a slightly longer tail fin, making the two sexes easy to tell apart.</p>
+		</div>
+		
+		<div class="block">
+			<h3>Canis latrans (Coyote)</h3>
+			<p>The coyote tends to reside in a burrow when it's not looking for food and the coyote is more than capable of digging the burrow itself. The coyote is intelligent enough to find and inhabit an empty badger burrow if at all possible. This becomes the centre of the coyote's territory which can extend to 19 km around the den. The size of the territory depends on how much food is available.</p>
+		</div>
+
+		<div class="block">
+			<img src="./img/Mustard03.jpg">
+		</div>
+
+		<div class="block">
+			<h3>Saguinus Geoffroyi (Geoffroys Tamarin)</h3>
+			<p>The Geoffroy's tamarin has a very distinctive "v" shaped mark on its head and has no fur on its face. The Geoffroy's tamarin is highly territorial and is known to make numerous different calls and threats to approaching danger in the surrounding forest.</p>
+		</div>
+
+		<div class="block">
+			<img src="./img/PastelBright.jpg">
+		</div>
+
+
+		<div class="block">
+			<img src="./img/White-Mustard-Black.jpg">
+		</div>
+
+		<div class="block">
+			<img src="./img/arctic_fox.jpg">
+		</div>
+	</section>
+
+	<!-- Clear the float -->
+	<div class="clr"></div>
+	
+	<section>
+		<h2>Terms & Definition</h2>
+		<div>
+			<h3>Positioning in <strong-big>CSS</strong-big></h3>
+			<ul>
+				<li><strong>Static:</strong> default, following the document flow</li>
+				<li><strong>Relative:</strong> to the normal/default page position; top 0px is the beginning of the page.</li>
+				<li><strong>Absolute:</strong> targets to the position inside a relative element</li>
+				<li><strong>Fixed:</strong> to the browser window, regardless if we scroll or resize the window, the position is fixed onto a specific posiiton</li>
+				<li><strong>Initial:</strong> Set its properties to the default value</li>
+				<li><strong>Inherit:</strong> inherit the parent's properties. Useful with margin, e.g. cause margin inherits from root by default and not the parent.</li>
+			</ul>
+			<h4>Example:</h4>
+			<!-- positioning-box -->
+			<div class="pBox" id="pExample">
+				<a href="#pExample"><h1 class="relative">Relative </h1></a>
+				<a href="#pExample"><h1 class="absolute">Absolute </h1></a>
+				<a href="#pExample"><h1 class="fixed">Fixed</h1></a>
+				<a href="#pExample"><h1 class="initial">Initial</h1></a>
+				<a href="#pExample"><h1 class="inherit">Inherit</h1></a>
+			</div>
+		</div>
+
+		<div>
+		<h3>More logical syntax with colons and bracket</h3>
+		<h4>Example with ordered list</h4>
+		<ol class="myOrList">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 4</li>
+			<li>List item 5</li>
+			<li>List item 6</li>
+			<li>List item 7</li>
+			<li>List item 8</li>
+			<li>List item 9</li>
+			<li>List item 10</li>
+			<li>List LAST item</li>
+		</ol>
+
+		</div>
+
+		
+	</section>
+
+	<!-- 
+	<footer>
+		<h2>My Palette</h2>
+
+
+	</footer> -->
+	<div style="margin-top: 300px"></div>
+</body>
+</html>
