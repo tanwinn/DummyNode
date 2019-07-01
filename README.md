@@ -1,4 +1,4 @@
-# nodeJS_dummy
+# Dummy Node JS
 A dummy web server using NodeJS
 Traversy Media Crash Course series ([more](https://www.youtube.com/watch?v=fBNz5xF-Kx4))
 
