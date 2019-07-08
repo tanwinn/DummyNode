@@ -26,7 +26,7 @@ function inRange(thing1, thing2, range){
 }
 
 // function myRandomColor(bool){
-    // return `rgb(${myRandomInt(0,255)},${myRandomInt(0,255)},${myRandomInt(0,255)})`;
+//     return `rgb(${myRandomInt(0,255)},${myRandomInt(0,255)},${myRandomInt(0,255)})`;
 // }
 
 class Circle {
