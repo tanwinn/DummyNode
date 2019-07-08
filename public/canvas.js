@@ -17,11 +17,11 @@ let range = myRandomInt(20, 70);
 // Return a random number between 0 (inclusive) and 1 (exclusive):
 function RectDemo(){
     for (let i = 0; i < range; i++){
-        DrawRandomRect();
+        drawRandomRect();
     }
 }
 
-function DrawRandomRect(){
+function drawRandomRect(){
     var prop = new Array(4);
     prop[1] = myRandomInt(0, canvas.width);
     prop[2] = myRandomInt(0, canvas.height/3);
@@ -60,11 +60,11 @@ c.stroke();
 range =  myRandomInt(50, 140);
 function CircleDemo(){
     for (let i = 0; i < range; i++){
-        DrawRandomCircle();
+        drawRandomCircle();
     }
 }
 
-function DrawRandomCircle(){
+function drawRandomCircle(){
     c.beginPath();
     c.strokeStyle = myRandomColor();
     x = myRandomInt(0, canvas.width), y = myRandomInt(canvas.height/2, canvas.height/2+200);
@@ -91,26 +91,11 @@ function animate(){
     
     else{
         // console.log(frame++);
-        DrawRandomCircle();
-        DrawRandomRect();
+        drawRandomCircle();
+        drawRandomRect();
         frame++;
         requestAnimationFrame(animate);
-
     }
 }
 
 animate();
-
-// returns a random number between min (included) and max (excluded)
-// Integers
-function myRandomInt(min, max) {
-    return Math.floor(myRandomFloat(min, max));
-}
-
-function myRandomFloat (min, max) {
-    return Math.random() * max + min;
-}
-
-function myRandomColor(){
-    return `rgb(${myRandomInt(0,255)},${myRandomInt(0,255)},${myRandomInt(0,255)})`;
-}

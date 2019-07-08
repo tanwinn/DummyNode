@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 <head>
+    <title>Canvas Animation Demo: circle</title>
+	<link rel='stylesheet' type='text/css' href='./css/style.css'>
 	<meta charset="UTF-8">
-	<title>HTML5 Canvas crash course by Chris courses</title>
-	<!-- https://www.youtube.com/watch?v=EO6OkltgudE -->
-	<link rel="stylesheet" type="text/css" href="./css/style.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-compatible" content="ie=edge">
 	<script src="helperFunctions.js" type="text/javascript"></script>
 </head>
 <body>
-	<!-- <h1>Canvas for dummies</h1> -->
-	<canvas></canvas>
-	<script src="canvas.js" type="text/javascript"></script>
-	<!-- <script src="main.js" type="text/javascript"></script>
-	<script src="canvas.js" type="text/javascript"></script> -->
+	<div class="canvas">
+		<canvas id=main-canvas></canvas>
+		<canvas id=animation-canvas></canvas>
+		<script src='canvasAnimation.js'></script>
+	</div>
 </body>
 <footer class='mainFooter'><p>
 		<a href=./index.html>Index</a> | 
