@@ -7,7 +7,7 @@ Traversy Media Crash Course series ([more](https://www.youtube.com/watch?v=fBNz5
 ### Clone the project
 <code>git clone git@github.com:tanwinn/nodeJS_dummy.git</code>
 
-### Insall depenedencies (package.json)
+### Install depenedencies (package.json)
 <code>npm install</code>
 
 ### Run the server with nodemon
@@ -35,3 +35,5 @@ Traversy Media Crash Course series ([more](https://www.youtube.com/watch?v=fBNz5
 <code> npm run <the_text> </code>
 nodemon constantly observe the change during the development process, so the server doesn't have to be canceled and restarted every time the code is altered
 
+### Deploy in Heroku
+https://my-dummy-node.herokuapp.com
