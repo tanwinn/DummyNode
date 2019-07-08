@@ -15,6 +15,7 @@ body {
 	color:#003453;
 	font: sans-serif;
 	line-height: 1.2em;
+	margin: 0;
 }
 
 blockquote {
@@ -24,6 +25,33 @@ blockquote {
 	font-style: italic;
 	width: 80%;
 	padding: 2%;
+}
+
+canvas {
+	border: 1px dashed grey;
+	/* width: 100%;
+	height: 100%; */
+}
+
+div.canvas{
+	position: relative;
+	display:inline-block;
+	/* height: 500px; */
+}
+
+div canvas{
+	position: absolute;
+	left:0px;
+	right:0px;
+}
+
+canvas.main-canvas{
+	/*bottom layer*/
+	z-index: 1;
+}
+
+canvas.animation-canvas{
+	z-index: 2;
 }
 
 code {
@@ -88,6 +116,11 @@ div.categories ul{
 
 em{
 	color: navy;
+}
+
+em-dark-bg{
+	color: white;
+	font-style: italic;
 }
 
 h1 {
@@ -219,9 +252,19 @@ ul.fancy li{
 
 .mainFooter{
 	text-align: center;
-	font: 18px;
-	color: #1F2021;
+	font-size: 22px;
+	background-color: rgb(43, 45, 46);
+	color: white;
 	padding: 5px;
+	width: 100%;
+	margin:auto;
+	position: relative;
+	bottom: 0px;
+}
+
+.mainFooter a{
+	color:white;
+	font-family: sans-serif;
 }
 
 .myForm{
