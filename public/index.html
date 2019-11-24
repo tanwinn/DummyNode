@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
- 	<!-- Details, title, specs, CSS Styles (not rec) -->
 	<title>HTML Cheat sheet</title>
 	<!-- CSS Style link -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body style="margin-bottom: 150px; margin-left: 30px; margin-right: 100px">
 	<h1>Note</h1>
 	<div>
 		Exact src code: Ctrl+U (Firefox) / F12 (Chrome)
-		<br>
+		<br>	
 		PHP: dynamic programming that generates the HTML code
 	</div>
 	
@@ -45,7 +47,7 @@
 			<br>
 			You can customize strong/em in css, default is bold/italics
 			<br>
-			<a href="google.com" target="_blank">This is an external link to Google.com using a href tag with its tag attribute <em>target</em></a>
+			<a href="google.com" target="_blank">This is an external link to Google.com using a href tag with its tag attribute</a><em>target</em>
 		</p>
 
 		<!-- List -->
@@ -70,7 +72,7 @@
 		<h4>Table</h4>
 		for tabular data <em>only</em>
 		<br>
-		<table>
+		<table class="pure-table">
 			<thead>
 				<!-- Head of the table: t-head -->
 				<!-- t-row -->
@@ -161,13 +163,52 @@
 		<a href="img/note01-html5SemanticTag.png" target="_blank"><img src="img/note01-html5SemanticTag.png" width="500"></a>
 	</div>
 </body> 
-<footer class='mainFooter'><p>
-		<a href=./index.html>Index</a> | 
-		<a href=./aboutJS.html>JavaScript</a> | 
-		<a href=./cssTutorial.html>CSS Style</a> | 			
-		<a href=./blog.html>Blog</a> | 
-		<a href=./designScheme.html>Design Scheme</a> | 
-		<a href=./canvasCrashCourse.html>Canvas Demo</a> | 
-		<a href=./canvasAnimatingCircle.html>Moving circle</a> 
+
+<body id="mainBody">
+		<header class="mainHeader">
+			<h1>The Animial Familia Dictionary</h1>
+			<em-dark-bg>Because Common Names are for Commoners</em-dark-bg>
+		</header>
+		<section>
+			<article class="standardPost">
+					  <h3>About &lt;article&gt; tag</h3>
+					  <small>Written by <a href="https://deve loper.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank">Mozilla Developers</a></small>
+					  <p>The HTML &lt;article&gt; element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry.</p>
+			</article>
+	
+			<article class="toc">
+				<h3>Inventory</h3>
+				<small>Posted by Tan.Winn on June 1</small>
+				<ul>
+					<li>Aptenodytes Patagonicus</li>
+					<li>Ardeidae</li>
+					<li>Heleioporus</li>
+				</ul>
+			</article>
+			
+			<article>
+					  <h3>CSS Crash Course</h3>
+					  <small>Instructed by <a href="https://www.youtube.com/watch?v=yfoY53QXEnI" target="_blank">Traversy Media</a></small>
+					  <p>
+						  CSS Crash Course for Absolute Beginners Note
+						  <a href="cssTutorial.html">Read More</a>
+					  </p>
+			</article>
+		</section>
+		
+		<!-- Aside -->
+		<aside>
+			<h3>Categories</h3>
+			<nav>
+				<ul>
+					<li><a href="#">Category 1</a></li>
+					<li><a href="#">Category 2</a></li>
+					<li><a href="#">Category 3</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</body>
+<footer class='mainFooter'>
+	<script src=mainFooter.js></script>
 </footer>
 </html>
